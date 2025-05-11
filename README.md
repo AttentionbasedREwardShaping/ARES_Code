@@ -66,9 +66,3 @@ python generate_SAC_inferred_output.py rewards.txt finaloutput.txt Hopper-v4 4 1
 - Output saved to `finaloutput.txt`
 
 ---
-
-## 📄 Notes
-
-- All environments assume MuJoCo gym versions (e.g., `Hopper-v4`)
-- The scripts assume GPU acceleration and vectorized training via `Stable-Baselines3` or similar
-
