@@ -16,7 +16,7 @@ Anonymized repository for the ARES paper.
 
 The datasets (TrainingExpert and Random) used in this paper can be downloaded [here](https://drive.google.com/file/d/13ue2aqBMZLj_6IxhZYW4Azz8id5dNN-G/view?usp=sharing).
 
-The MuJoCo environment rewards can be found [here](https://drive.google.com/file/d/1mtUXWjigaX4I1etbTfqnTfF7jglbVE7o/view?usp=sharing).
+The MuJoCo environment rewards can be downloaded [here](https://drive.google.com/file/d/1mtUXWjigaX4I1etbTfqnTfF7jglbVE7o/view?usp=sharing).
 
 ---
 
