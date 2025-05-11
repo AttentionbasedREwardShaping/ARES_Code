@@ -1,3 +1,4 @@
+
 # ARES: Attention-based REward Shaping
 
 Anonymized repository for the ARES paper.
@@ -66,3 +67,9 @@ python generate_SAC_inferred_output.py rewards.txt finaloutput.txt Hopper-v4 4 1
 - Output saved to `finaloutput.txt`
 
 ---
+
+## 🧪 Toy Environments (CliffWalking-m, CartPole, LunarLander)
+
+To generate data, run the respective generator files under each folder.
+
+To rerun our experiments, move the data under the same directory as the relevant experiment generator Python file, then run the experiment generator.
