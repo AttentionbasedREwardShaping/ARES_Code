@@ -3,7 +3,7 @@
 
 Anonymized repository for the ARES paper.
 
-## 📦 Requirements
+## Requirements
 
 - **Python version**: 3.10.12  
 - **Dependencies**:  
@@ -12,15 +12,15 @@ Anonymized repository for the ARES paper.
   pip install -r requirements.txt
   ```
 
-## 📁 Datasets
+## Datasets
 
 The datasets used in this paper can be downloaded [here](https://drive.google.com/file/d/13ue2aqBMZLj_6IxhZYW4Azz8id5dNN-G/view?usp=sharing).
 
 ---
 
-## 🚀 Running MuJoCo Experiments
+## Running MuJoCo Experiments
 
-### 🔹 Generate Random Data
+### Generate Random Data
 
 Generate 10 random datasets of 1000 timesteps each using 4 processes:
 
@@ -28,7 +28,7 @@ Generate 10 random datasets of 1000 timesteps each using 4 processes:
 python gym_random_episode_gen.py Hopper-v4 1000 4
 ```
 
-### 🔹 Generate TrainingExpert Data
+### Generate TrainingExpert Data
 
 Use a SAC agent to generate 1,000,000 timesteps of slowly improving expert behavior on `Hopper-v4`:
 
@@ -38,7 +38,7 @@ python generate_SAC_expert_output.py output.txt Hopper-v4 1000000 4
 
 - Output will be saved to `output.txt`
 
-### 🔹 Generate Shaped Rewards from Output
+### Generate Shaped Rewards from Output
 
 Train a transformer reward model for 10,000 epochs on the generated output:
 
@@ -52,7 +52,7 @@ python output_to_unmerged_rewards.py output.txt rewards.txt 10000 512 0.00001 8 
 - `11`: state dimensions  
 - `3`: action dimensions (Hopper-v4)
 
-### 🔹 Train SAC Agent with Shaped Rewards
+### Train SAC Agent with Shaped Rewards
 
 Train a SAC agent using the shaped rewards:
 
@@ -68,7 +68,7 @@ python generate_SAC_inferred_output.py rewards.txt finaloutput.txt Hopper-v4 4 1
 
 ---
 
-## 🧪 Toy Environments (CliffWalking-m, CartPole, LunarLander)
+## Toy Environments (CliffWalking-m, CartPole, LunarLander)
 
 To generate data, run the respective generator files under each folder.
 
