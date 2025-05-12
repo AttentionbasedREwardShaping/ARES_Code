@@ -12,6 +12,8 @@ Anonymized repository for the ARES paper.
   pip install -r requirements.txt
   ```
 
+  Note: To use MuJoCo on Windows, we recommend the usage of [WSL](https://learn.microsoft.com/en-us/windows/wsl/install). 
+
 ## Datasets
 
 The datasets (TrainingExpert and Random) used in this paper can be downloaded [here](https://drive.google.com/file/d/13ue2aqBMZLj_6IxhZYW4Azz8id5dNN-G/view?usp=sharing).
