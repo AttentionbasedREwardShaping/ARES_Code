@@ -14,7 +14,7 @@ from scipy.spatial import KDTree
 # Suppress all future warnings
 warnings.filterwarnings("ignore", category=FutureWarning)
 
-class SaveOnBestTrainingRewardCallback(BaseCallback):
+class LogAndSaveCallback(BaseCallback):
     def __init__(self, check_freq, outfile, n_envs, verbose=1):
         super().__init__(verbose)
         self.check_freq = check_freq
@@ -101,7 +101,7 @@ class SaveOnBestTrainingRewardCallback(BaseCallback):
         #             f.write("\n")
 
 class DelayedRewardWrapper(gym.Wrapper):
-    """Wrapper that delivers a sparse/delayed reward only at the end of the episode.
+    """Wrapper that delivers a reward only at the end of the episode.
     
     All step rewards are 0, except for the last step which returns the sum of
     all rewards accumulated during the episode.
@@ -144,7 +144,7 @@ def run_environment(outfile, env_name, timesteps, n_envs):
         env = VecNormalize(env, norm_obs=True, norm_reward=True, clip_obs=10.0)
 
     # Create the callback
-    callback = SaveOnBestTrainingRewardCallback(check_freq=10000, outfile=outfile, n_envs=n_envs)
+    callback = LogAndSaveCallback(check_freq=10000, outfile=outfile, n_envs=n_envs)
 
     # Create and train the model
     model = SAC(

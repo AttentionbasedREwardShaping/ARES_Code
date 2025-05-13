@@ -96,7 +96,7 @@ def find_closest_state_action_reversed(state, action):
     return find_closest_action_from_states(action, state_indices)
 
 class InferredRewardWrapper(gym.Wrapper):
-    """Wrapper that infers rewards using a KDTree model."""
+    """Wrapper that implements the shaped rewards."""
     
     def __init__(self, env):
         super().__init__(env)
@@ -124,7 +124,7 @@ class InferredRewardWrapper(gym.Wrapper):
         
         return obs, inferred_reward, terminated, truncated, infos
 
-class SaveOnBestTrainingRewardCallback(BaseCallback):
+class LogAndSaveCallback(BaseCallback):
     def __init__(self, check_freq, outfile, verbose=1):
         super().__init__(verbose)
         self.check_freq = check_freq
@@ -297,7 +297,7 @@ def run_hopper(infile, outfile, rounding):
         env = VecNormalize(env, norm_obs=True, norm_reward=False, clip_obs=10.0)
 
     # Create the callback
-    callback = SaveOnBestTrainingRewardCallback(check_freq=10000, outfile=outfile)
+    callback = LogAndSaveCallback(check_freq=10000, outfile=outfile)
     
     model = SAC(
         policy="MlpPolicy",
