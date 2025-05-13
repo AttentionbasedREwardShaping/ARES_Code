@@ -34,7 +34,7 @@ python gym_random_episode_gen.py Hopper-v4 1000 4
 
 ### Generate TrainingExpert Data
 
-Use a SAC agent to generate 1,000,000 timesteps of slowly improving expert behavior on `Hopper-v4`:
+Generate 1,000,000 timesteps of a SAC agent learning `Hopper-v4`:
 
 ```bash
 python generate_SAC_expert_output.py output.txt Hopper-v4 1000000 4
