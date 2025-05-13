@@ -84,9 +84,5 @@ To rerun our experiments, move the data under the same directory as the relevant
 
 There are 3 main Python files for SAC on MuJoCo (one for shaped rewards, one for immeddiate rewards, and one for shaped rewards).
 Similarly, there are 3 main Python files for PPO on MuJoCo.
-There is one more Python file for SAC on MuJoCo using the shaped rewards: 
-```bash
-generate_SAC_inferred_output_parameters.py
-```
-which can be used for a hyperparameter search using the shaped rewards.
+There is one more Python file for SAC on MuJoCo using the shaped rewards: `generate_SAC_inferred_output_parameters.py` which can be used for a hyperparameter search using the shaped rewards.
 Note that all of these Python files share a good deal of common code: the main reason it is set up this way is to make it very, very clear (both for us while performing the research, and for the interested reader) that there is absolutely no leakage between the three controlled experiment settings (i.e. the immediate rewards are never, ever used by the shaped reward agent). 
