@@ -1,7 +1,7 @@
 
 # ARES: Attention-based REward Shaping
 
-Anonymized repository for the ARES paper.
+Anonymized repository for the ARES paper. This code is also in the Supplementary Material submitted alongside the paper. The data used in the experiments is linked below.
 
 ## Requirements
 
@@ -82,7 +82,7 @@ To rerun our experiments, move the data under the same directory as the relevant
 
 ---
 
-There are 3 main Python files for SAC on MuJoCo (one for shaped rewards, one for immeddiate rewards, and one for shaped rewards).
+There are 3 main Python files for SAC on MuJoCo (one for shaped rewards, one for immediate rewards, and one for shaped rewards).
 
 Similarly, there are 3 main Python files for PPO on MuJoCo.
 
